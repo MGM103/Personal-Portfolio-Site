@@ -1,6 +1,7 @@
 <script>
 	import '$lib/styles/main.scss';
 	import NavBar from './NavBar.svelte';
+	import Footer from './Footer.svelte';
 	let { children } = $props();
 </script>
 
@@ -9,6 +10,7 @@
 	<main>
 		{@render children()}
 	</main>
+	<Footer />
 </div>
 
 <style scoped lang="scss">
