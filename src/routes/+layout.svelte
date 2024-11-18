@@ -19,7 +19,6 @@
 		grid-template-rows: auto 1fr auto;
 		height: 100%;
 		margin-inline: auto;
-		max-inline-size: 1080px;
 		padding-inline: 2rem;
 	}
 </style>

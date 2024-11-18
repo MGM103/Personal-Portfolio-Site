@@ -1,16 +1,18 @@
 <nav>
 	<div class="logo">
-		<span>Marcus</span>
-		<span>Marinelli</span>
+		<a href="/">
+			<span>Marcus</span>
+			<span>Marinelli</span>
+		</a>
 	</div>
 	<ul>
-		<li><a href="/projects">Projects</a></li>
 		<li><a href="/blog">Blog</a></li>
+		<li><a href="/projects">Projects</a></li>
 		<li><a href="/security">Security</a></li>
 		<!-- To-do Add theme toggling -->
 		<!-- <button>Theme</button> -->
 	</ul>
-	<button class="resume">Resume</button>
+	<button class="resume">Résumé</button>
 </nav>
 
 <style scoped lang="scss">
@@ -36,6 +38,7 @@
 			position: relative;
 
 			a {
+				color: var(--secondary);
 				display: inline-block;
 				font-size: 1.125rem;
 				font-weight: 500;
@@ -62,13 +65,16 @@
 	}
 
 	.logo {
-		display: flex;
-		flex-direction: column;
+		a {
+			color: var(--secondary);
+			display: flex;
+			flex-direction: column;
+			text-decoration: none;
+		}
 
 		span {
 			font-family: 'Press Start 2P', system-ui;
 			font-size: 1.25rem;
-			max-width: 250px;
 			text-align: center;
 		}
 	}
