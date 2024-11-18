@@ -1,0 +1,72 @@
+@use '@fontsource-variable/noto-sans';
+
+// Light mode colours
+$LIGHT-SURFACE-1: hsl(220, 50%, 90%);
+$LIGHT-SURFACE-2: hsl(220, 50%, 95%);
+$LIGHT-SURFACE-3: hsl(220, 50%, 100%);
+$LIGHT-SHADOW-1: hsla(220, 50%, 10%, 0.3);
+$LIGHT-SHADOW-2: hsla(220, 50%, 10%, 0.15);
+$SECONDARY-LIGHT: hsl(220, 50%, 10%);
+$TERTIARY-LIGHT: hsl(280, 80%, 20%);
+$ACCENT-LIGHT: hsl(160, 80%, 20%);
+$DISABLED-LIGHT: hsl(220, 50%, 35%);
+
+// Dark mode colours
+$DARK-SURFACE-1: hsl(220, 50%, 10%);
+$DARK-SURFACE-2: hsl(220, 50%, 15%);
+$DARK-SURFACE-3: hsl(220, 50%, 20%);
+$DARK-SHADOW-1: hsla(220, 50%, 90%, 0.3);
+$DARK-SHADOW-2: hsla(220, 50%, 90%, 0.15);
+$SECONDARY_DARK: hsl(220, 50%, 90%);
+$TERTIARY-DARK: hsl(280, 80%, 80%);
+$ACCENT-DARK: hsl(160, 80%, 80%);
+$DISABLED-DARK: hsl(220, 50%, 75%);
+
+:root {
+	--surface-1: #{$LIGHT-SURFACE-1};
+	--surface-2: #{$LIGHT-SURFACE-2};
+	--surface-3: #{$LIGHT-SURFACE-3};
+	--shadow-1: #{$LIGHT-SHADOW-1};
+	--shadow-2: #{$LIGHT-SHADOW-2};
+	--secondary: #{$SECONDARY-LIGHT};
+	--tertiary: #{$TERTIARY-LIGHT};
+	--accent: #{$ACCENT-LIGHT};
+	--disabled: #{$DISABLED-LIGHT};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--surface-1: #{$DARK-SURFACE-1};
+		--surface-2: #{$DARK-SURFACE-2};
+		--surface-3: #{$DARK-SURFACE-3};
+		--shadow-1: #{$DARK-SHADOW-1};
+		--shadow-2: #{$DARK-SHADOW-2};
+		--secondary: #{$SECONDARY-DARK};
+		--tertiary: #{$TERTIARY-DARK};
+		--accent: #{$ACCENT-DARK};
+		--disabled: #{$DISABLED-DARK};
+	}
+}
+
+body {
+	background-color: var(--surface-1);
+	color: var(--secondary);
+	font-family: 'Noto Sans Variable', sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: var(--accent);
+}
