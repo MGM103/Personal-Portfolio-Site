@@ -25,6 +25,7 @@
 		"vite": "^5.0.3"
 	},
 	"dependencies": {
-		"@fontsource-variable/noto-sans": "^5.1.0"
+		"@fontsource-variable/noto-sans": "^5.1.0",
+		"@fontsource/press-start-2p": "^5.1.0"
 	}
 }
