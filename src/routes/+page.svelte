@@ -40,6 +40,7 @@
 	.home-container {
 		margin-block: 2rem;
 	}
+
 	.content-card {
 		background-color: var(--surface-2);
 		box-shadow: 0 0px 2px var(--shadow-1);
@@ -69,9 +70,15 @@
 
 	.bio-second-row {
 		align-items: flex-start;
+		box-sizing: border-box;
 		display: flex;
 		gap: 4rem;
 		justify-content: left;
+
+		@media (max-width: 680px) {
+			flex-direction: column;
+			gap: 2rem;
+		}
 
 		.bio-content {
 			h2 {
