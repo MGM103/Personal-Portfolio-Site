@@ -27,6 +27,8 @@
 			}
 		}
 	</script>
+
+	<title>Marcus Marinelli Dev</title>
 </svelte:head>
 
 <div class="container">
