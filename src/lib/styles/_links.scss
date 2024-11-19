@@ -1,0 +1,23 @@
+.nav-link {
+	color: var(--secondary);
+	display: inline-block;
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1.75rem;
+	text-decoration: none;
+	transition: transform 0.15s ease-out;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.text-link {
+	display: inline-block;
+	text-decoration: none;
+	transition: text-decoration 0.15s ease-in;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,21 @@
+.accented-btn {
+	background-color: var(--tertiary);
+	border-radius: 6px;
+	border: none;
+	color: var(--surface-1);
+	cursor: pointer;
+	font-weight: 550;
+	padding: 10px 12px;
+	transition: background-color 0.2s ease-in;
+	width: 100px;
+
+	&:hover {
+		background-color: var(--tertiary-hover);
+	}
+}
+
+.transparent-btn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}

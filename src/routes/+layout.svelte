@@ -1,8 +1,24 @@
 <script>
+	import { onMount } from 'svelte';
 	import '$lib/styles/main.scss';
 	import NavBar from './NavBar.svelte';
 	import Footer from './Footer.svelte';
+
+	// PROPS
 	let { children } = $props();
+
+	// LIFECYCLE
+	onMount(() => {
+		const theme = localStorage.getItem('theme');
+
+		if (theme === 'dark') {
+			document.body.classList.add('dark-theme');
+			document.body.classList.remove('light-theme');
+		} else if (theme === 'light') {
+			document.body.classList.remove('dark-theme');
+			document.body.classList.add('light-theme');
+		}
+	});
 </script>
 
 <div class="container">

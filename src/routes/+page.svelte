@@ -54,13 +54,17 @@
 				<p>Welcome to my personal site!</p>
 				<p>
 					I'm a software engineer specialising in full-stack development. This site showcases my
-					latest <a href="/projects">projects</a>, all my <a href="/blog">technical writing</a> and
-					my progress as an independent <a href="/security">security researcher</a>.
+					latest <a href="/projects" class="text-link">projects</a>, all my
+					<a href="/blog" class="text-link">technical writing</a>
+					and my progress as an independent
+					<a href="/security" class="text-link">security researcher</a>.
 				</p>
 				<p>
 					Should my skills or previous experience align with a position you are looking to fill, or
 					if you would like to discuss a potential project, please feel free to contact me via
-					<a href="mailto:marcus.marinelli3@gmail.com?subject=Work%20Enquiry">email</a>.
+					<a href="mailto:marcus.marinelli3@gmail.com?subject=Work%20Enquiry" class="text-link"
+						>email</a
+					>.
 				</p>
 			</div>
 		</div>
@@ -166,16 +170,6 @@
 
 				span {
 					color: var(--accent);
-				}
-			}
-
-			a {
-				display: inline-block;
-				text-decoration: none;
-				transition: transform 0.15s ease-in;
-
-				&:hover {
-					transform: scale(1.025);
 				}
 			}
 		}

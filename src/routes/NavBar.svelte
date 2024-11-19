@@ -1,13 +1,16 @@
 <script>
 	import { onMount } from 'svelte';
-	import { HamburgerMenuSvg } from '$lib/assets';
+	import { DarkThemeSvg, HamburgerMenuSvg, LightThemeSvg } from '$lib/assets';
+	import { error } from '@sveltejs/kit';
 
 	// STATE VARS
 	let showMobileMenu = $state(false);
 	let screenSize = $state(0);
+	let buttonTheme = $state(null);
 
 	// LIFECYCLE LOGIC
 	onMount(() => {
+		buttonTheme = getTheme();
 		window.addEventListener('resize', updateScreenSize);
 
 		updateScreenSize();
@@ -21,8 +24,37 @@
 	let displayLinks = $derived(screenSize > 768 || showMobileMenu);
 
 	// COMPONENT METHODS
+	function getTheme() {
+		const currentTheme = localStorage.getItem('theme');
+
+		if (currentTheme === 'dark') {
+			return 'dark';
+		} else if (currentTheme === 'light') {
+			return 'light';
+		} else if (currentTheme === null) {
+			const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			return prefersDarkMode ? 'dark' : 'light';
+		} else {
+			throw error('Theme could not be identified');
+		}
+	}
+
 	function toggleMobileMenu() {
 		showMobileMenu = !showMobileMenu;
+	}
+
+	function toggleTheme() {
+		const isDarkTheme = getTheme() === 'dark';
+
+		if (isDarkTheme) {
+			document.body.classList.remove('dark-theme');
+			document.body.classList.add('light-theme');
+			localStorage.setItem('theme', 'light');
+		} else {
+			document.body.classList.add('dark-theme');
+			document.body.classList.remove('light-theme');
+			localStorage.setItem('theme', 'dark');
+		}
 	}
 
 	function updateScreenSize() {
@@ -40,13 +72,24 @@
 	{#if displayLinks}
 		<div class="links-container">
 			<ul>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="/projects">Projects</a></li>
-				<li><a href="/security">Security</a></li>
-				<!-- To-do Add theme toggling -->
-				<!-- <button>Theme</button> -->
+				<li><a href="/blog" class="nav-link">Blog</a></li>
+				<li><a href="/projects" class="nav-link">Projects</a></li>
+				<li><a href="/security" class="nav-link">Security</a></li>
 			</ul>
-			<button class="resume-btn">Résumé</button>
+			<button
+				class="transparent-btn"
+				onclick={() => {
+					toggleTheme();
+					buttonTheme = getTheme();
+				}}
+			>
+				{#if buttonTheme === 'light'}
+					<LightThemeSvg />
+				{:else if buttonTheme === 'dark'}
+					<DarkThemeSvg />
+				{/if}
+			</button>
+			<button class="accented-btn">Résumé</button>
 		</div>
 	{/if}
 	<button class="mobile-menu-btn" onclick={() => toggleMobileMenu()}><HamburgerMenuSvg /></button>
@@ -80,20 +123,6 @@
 				padding: 0.5rem;
 			}
 
-			a {
-				color: var(--secondary);
-				display: inline-block;
-				font-size: 1.125rem;
-				font-weight: 500;
-				line-height: 1.75rem;
-				text-decoration: none;
-				transition: transform 0.15s ease-out;
-
-				&:hover {
-					transform: scale(1.05);
-				}
-			}
-
 			button {
 				margin-left: auto;
 			}
@@ -112,17 +141,6 @@
 		@media (max-width: 768px) {
 			display: inline-block;
 		}
-	}
-
-	.resume-btn {
-		background-color: var(--tertiary);
-		border-radius: 6px;
-		border: none;
-		color: var(--surface-1);
-		cursor: pointer;
-		font-weight: 550;
-		padding: 10px 12px;
-		width: 100px;
 	}
 
 	.logo {
