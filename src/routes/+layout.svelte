@@ -1,25 +1,33 @@
 <script>
-	import { onMount } from 'svelte';
 	import '$lib/styles/main.scss';
 	import NavBar from './NavBar.svelte';
 	import Footer from './Footer.svelte';
 
 	// PROPS
 	let { children } = $props();
-
-	// LIFECYCLE
-	onMount(() => {
-		const theme = localStorage.getItem('theme');
-
-		if (theme === 'dark') {
-			document.body.classList.add('dark-theme');
-			document.body.classList.remove('light-theme');
-		} else if (theme === 'light') {
-			document.body.classList.remove('dark-theme');
-			document.body.classList.add('light-theme');
-		}
-	});
 </script>
+
+<svelte:head>
+	<script>
+		if (document) {
+			const theme = localStorage.getItem('theme');
+
+			if (!theme) {
+				theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+
+			if (theme === 'dark') {
+				document.documentElement.classList.add('dark-theme');
+				document.documentElement.classList.remove('light-theme');
+				localStorage.setItem('theme', 'dark');
+			} else {
+				document.documentElement.classList.add('light-theme');
+				document.documentElement.classList.remove('dark-theme');
+				localStorage.setItem('theme', 'light');
+			}
+		}
+	</script>
+</svelte:head>
 
 <div class="container">
 	<NavBar />
