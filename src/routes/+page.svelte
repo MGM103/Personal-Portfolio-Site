@@ -44,7 +44,11 @@
 					target="_blank"
 					title="LinkedIn"><LinkedInSvg /></a
 				>
-				<a href="/" title="Résumé"><ResumeSvg /></a>
+				<a
+					href="https://drive.google.com/file/d/1PjX0o2Jo1tCR3rbRnKqOH74kPNhBzD_P/view"
+					target="_blank"
+					title="Résumé"><ResumeSvg /></a
+				>
 			</div>
 		</div>
 		<div class="bio-second-row">

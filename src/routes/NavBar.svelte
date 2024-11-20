@@ -76,20 +76,26 @@
 				<li><a href="/projects" class="nav-link">Projects</a></li>
 				<li><a href="/security" class="nav-link">Security</a></li>
 			</ul>
-			<button
-				class="transparent-btn"
-				onclick={() => {
-					toggleTheme();
-					buttonTheme = getTheme();
-				}}
-			>
-				{#if buttonTheme === 'light'}
-					<LightThemeSvg />
-				{:else if buttonTheme === 'dark'}
-					<DarkThemeSvg />
-				{/if}
-			</button>
-			<button class="accented-btn">Résumé</button>
+			<div class="btn-group">
+				<button
+					class="transparent-btn"
+					onclick={() => {
+						toggleTheme();
+						buttonTheme = getTheme();
+					}}
+				>
+					{#if buttonTheme === 'light'}
+						<LightThemeSvg />
+					{:else if buttonTheme === 'dark'}
+						<DarkThemeSvg />
+					{/if}
+				</button>
+				<a
+					href="https://drive.google.com/file/d/1PjX0o2Jo1tCR3rbRnKqOH74kPNhBzD_P/view?usp=sharing"
+					target="_blank"
+					class="accented-btn-link">Résumé</a
+				>
+			</div>
 		</div>
 	{/if}
 	<button class="mobile-menu-btn" onclick={() => toggleMobileMenu()}><HamburgerMenuSvg /></button>
@@ -188,6 +194,18 @@
 				width: 100%;
 				z-index: -1;
 			}
+		}
+	}
+
+	.btn-group {
+		align-items: center;
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 1.25rem;
 		}
 	}
 </style>

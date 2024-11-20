@@ -21,3 +21,18 @@
 		text-decoration: underline;
 	}
 }
+
+.accented-btn-link {
+	background-color: var(--tertiary);
+	border-radius: 6px;
+	color: var(--surface-1);
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: background-color 0.2s ease-in;
+
+	&:hover {
+		background-color: var(--tertiary-hover);
+	}
+}
