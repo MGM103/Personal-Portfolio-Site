@@ -11,12 +11,14 @@
 	// LIFECYCLE LOGIC
 	onMount(() => {
 		buttonTheme = getTheme();
+		window.addEventListener('scroll', updateNavbarShadow);
 		window.addEventListener('resize', updateScreenSize);
 
 		updateScreenSize();
 
 		return () => {
 			window.removeEventListener('resize', updateScreenSize);
+			window.removeEventListener('scroll', updateNavbarShadow);
 		};
 	});
 
@@ -60,9 +62,21 @@
 	function updateScreenSize() {
 		screenSize = window.innerWidth;
 	}
+
+	let navBar;
+
+	const updateNavbarShadow = () => {
+		const scrollTop = window.scrollY;
+
+		if (scrollTop > 0) {
+			navBar.style.setProperty('--nav-shadow', '0 -8px 24px var(--secondary)');
+		} else {
+			navBar.style.setProperty('--nav-shadow', 'none');
+		}
+	};
 </script>
 
-<nav>
+<nav bind:this={navBar}>
 	<div class="logo">
 		<a href="/">
 			<span>Marcus</span>
@@ -128,10 +142,20 @@
 				gap: 1.5rem;
 				padding: 0.5rem;
 			}
+		}
 
-			button {
-				margin-left: auto;
-			}
+		&::before {
+			content: '';
+			background-color: var(--surface-1);
+			box-shadow: var(--nav-shadow);
+			height: 100%;
+			top: 0;
+			left: 50%;
+			position: absolute;
+			transform: translateX(-50%);
+			transition: box-shadow 0.5s ease;
+			width: 100vw;
+			z-index: 0;
 		}
 	}
 
@@ -150,6 +174,8 @@
 	}
 
 	.logo {
+		z-index: 1;
+
 		a {
 			color: var(--secondary);
 			display: flex;
@@ -202,6 +228,7 @@
 		display: flex;
 		gap: 2rem;
 		justify-content: center;
+		z-index: 1;
 
 		@media (max-width: 768px) {
 			flex-direction: column;

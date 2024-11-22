@@ -1,5 +1,6 @@
 @use '@fontsource-variable/noto-sans';
 @use 'buttons.scss';
+@use 'cards.scss';
 @use 'links.scss';
 
 // Light mode colours
@@ -13,6 +14,11 @@ $TERTIARY-LIGHT: hsl(280, 80%, 20%);
 $TERTIARY-HOVER-LIGHT: hsl(280, 80%, 25%);
 $ACCENT-LIGHT: hsl(160, 80%, 20%);
 $DISABLED-LIGHT: hsl(220, 50%, 35%);
+$GH-NO-ACTIVITY-LIGHT: hsl(209, 25%, 75%);
+$GH-LOW-ACTIVITY-LIGHT: '#9BE9A8';
+$GH-MED-ACTIVITY-LIGHT: '#40C463';
+$GH-HIGH-ACTIVITY-LIGHT: '#30A143';
+$GH-MAX-ACTIVITY-LIGHT: '#216E39';
 
 // Dark mode colours
 $DARK-SURFACE-1: hsl(220, 50%, 10%);
@@ -25,6 +31,11 @@ $TERTIARY-DARK: hsl(280, 80%, 80%);
 $TERTIARY-HOVER-DARK: hsl(280, 80%, 85%);
 $ACCENT-DARK: hsl(160, 80%, 80%);
 $DISABLED-DARK: hsl(220, 50%, 75%);
+$GH-NO-ACTIVITY-DARK: hsl(209, 19%, 35%);
+$GH-LOW-ACTIVITY-DARK: hsl(150, 79%, 27%);
+$GH-MED-ACTIVITY-DARK: hsl(148, 100%, 43%);
+$GH-HIGH-ACTIVITY-DARK: hsl(133, 77%, 65%);
+$GH-MAX-ACTIVITY-DARK: hsl(115, 100%, 65%);
 
 :root {
 	--surface-1: #{$LIGHT-SURFACE-1};
@@ -37,6 +48,11 @@ $DISABLED-DARK: hsl(220, 50%, 75%);
 	--tertiary-hover: #{$TERTIARY-HOVER-LIGHT};
 	--accent: #{$ACCENT-LIGHT};
 	--disabled: #{$DISABLED-LIGHT};
+	--gh-no-activity: #{$GH-NO-ACTIVITY-LIGHT};
+	--gh-low-activity: #{$GH-LOW-ACTIVITY-LIGHT};
+	--gh-med-activity: #{$GH-MED-ACTIVITY-LIGHT};
+	--gh-high-activity: #{$GH-HIGH-ACTIVITY-LIGHT};
+	--gh-max-activity: #{$GH-MAX-ACTIVITY-LIGHT};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,6 +67,11 @@ $DISABLED-DARK: hsl(220, 50%, 75%);
 		--tertiary-hover: #{$TERTIARY-HOVER-DARK};
 		--accent: #{$ACCENT-DARK};
 		--disabled: #{$DISABLED-DARK};
+		--gh-no-activity: #{$GH-NO-ACTIVITY-DARK};
+		--gh-low-activity: #{$GH-LOW-ACTIVITY-DARK};
+		--gh-med-activity: #{$GH-MED-ACTIVITY-DARK};
+		--gh-high-activity: #{$GH-HIGH-ACTIVITY-DARK};
+		--gh-max-activity: #{$GH-MAX-ACTIVITY-DARK};
 	}
 }
 
@@ -65,6 +86,11 @@ $DISABLED-DARK: hsl(220, 50%, 75%);
 	--tertiary-hover: #{$TERTIARY-HOVER-DARK};
 	--accent: #{$ACCENT-DARK};
 	--disabled: #{$DISABLED-DARK};
+	--gh-no-activity: #{$GH-NO-ACTIVITY-DARK};
+	--gh-low-activity: #{$GH-LOW-ACTIVITY-DARK};
+	--gh-med-activity: #{$GH-MED-ACTIVITY-DARK};
+	--gh-high-activity: #{$GH-HIGH-ACTIVITY-DARK};
+	--gh-max-activity: #{$GH-MAX-ACTIVITY-DARK};
 }
 
 .light-theme {
@@ -78,6 +104,11 @@ $DISABLED-DARK: hsl(220, 50%, 75%);
 	--tertiary-hover: #{$TERTIARY-HOVER-LIGHT};
 	--accent: #{$ACCENT-LIGHT};
 	--disabled: #{$DISABLED-LIGHT};
+	--gh-no-activity: #{$GH-NO-ACTIVITY-LIGHT};
+	--gh-low-activity: #{$GH-LOW-ACTIVITY-LIGHT};
+	--gh-med-activity: #{$GH-MED-ACTIVITY-LIGHT};
+	--gh-high-activity: #{$GH-HIGH-ACTIVITY-LIGHT};
+	--gh-max-activity: #{$GH-MAX-ACTIVITY-LIGHT};
 }
 
 body {

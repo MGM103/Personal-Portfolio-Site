@@ -41,10 +41,15 @@
 
 <style scoped lang="scss">
 	.container {
+		box-sizing: border-box;
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 		height: 100%;
 		margin-inline: auto;
-		padding-inline: 2rem;
+		max-width: 100%;
+	}
+
+	main {
+		overflow-x: hidden;
 	}
 </style>
