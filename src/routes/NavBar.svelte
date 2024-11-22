@@ -120,12 +120,14 @@
 
 	nav {
 		align-items: center;
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: row;
 		gap: 2.5rem;
 		justify-content: space-between;
 		margin-inline: auto;
 		padding-block: 1rem;
+		padding-inline: 2rem;
 		position: sticky;
 		top: 0;
 		width: 100%;
