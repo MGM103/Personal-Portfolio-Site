@@ -1,7 +1,8 @@
 <script>
 	import Bio from './Bio.svelte';
-	import SoftwareSkills from './SoftwareSkills.svelte';
+	import ContactMe from './ContactMe.svelte';
 	import GitHubActivity from './GitHubActivity.svelte';
+	import SoftwareSkills from './SoftwareSkills.svelte';
 
 	// PROPS
 	let { data } = $props();
@@ -9,8 +10,9 @@
 
 <div class="home-container">
 	<Bio />
-	<SoftwareSkills />
 	<GitHubActivity activityData={data} />
+	<SoftwareSkills />
+	<ContactMe />
 </div>
 
 <style scoped lang="scss">
