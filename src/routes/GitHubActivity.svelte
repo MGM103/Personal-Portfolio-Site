@@ -59,11 +59,13 @@
 		<h3>GitHub Activity</h3>
 		<a href="https://github.com/MGM103" target="_blank" class="text-link">view profile</a>
 	</div>
-	<div class="activity-graph-container">
-		<p>Total contributions: {activityData.data.totalContributions}</p>
-		<table id="activity-graph">
-			<tbody id="activity-graph-content"></tbody>
-		</table>
+	<div class="gh-activity-content">
+		<p>Yearly contributions: <span>{activityData.data.totalContributions}</span></p>
+		<div class="table-wrapper">
+			<table id="activity-graph">
+				<tbody id="activity-graph-content"></tbody>
+			</table>
+		</div>
 	</div>
 </div>
 
@@ -77,31 +79,36 @@
 
 		.gh-activity-heading {
 			align-items: center;
+			box-sizing: border-box;
 			display: flex;
 			justify-content: space-between;
+			padding: 2rem;
 			width: 100%;
 
 			h3 {
-				margin-left: 2rem;
-				margin-top: 2rem;
-			}
-
-			a {
-				margin-right: 2rem;
-				margin-top: 2rem;
+				margin: 0;
 			}
 		}
 
-		.activity-graph-container {
-			overflow-x: auto;
+		.gh-activity-content {
 			padding-bottom: 1.5rem;
 			padding-inline: 2rem;
-			width: 100%;
 
-			table {
-				border-collapse: separate;
-				border-spacing: 4px;
-				width: max-content;
+			span {
+				color: var(--accent);
+				font-weight: 500;
+			}
+
+			.table-wrapper {
+				overflow-x: auto;
+				padding-bottom: 0.5rem;
+				width: 100%;
+
+				table {
+					border-collapse: separate;
+					border-spacing: 4px;
+					width: max-content;
+				}
 			}
 		}
 	}

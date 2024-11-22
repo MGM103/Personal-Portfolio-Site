@@ -15,10 +15,10 @@ $TERTIARY-HOVER-LIGHT: hsl(280, 80%, 25%);
 $ACCENT-LIGHT: hsl(160, 80%, 20%);
 $DISABLED-LIGHT: hsl(220, 50%, 35%);
 $GH-NO-ACTIVITY-LIGHT: hsl(209, 25%, 75%);
-$GH-LOW-ACTIVITY-LIGHT: '#9BE9A8';
-$GH-MED-ACTIVITY-LIGHT: '#40C463';
-$GH-HIGH-ACTIVITY-LIGHT: '#30A143';
-$GH-MAX-ACTIVITY-LIGHT: '#216E39';
+$GH-LOW-ACTIVITY-LIGHT: hsl(130, 63%, 70%);
+$GH-MED-ACTIVITY-LIGHT: hsl(136, 54%, 51%);
+$GH-HIGH-ACTIVITY-LIGHT: hsl(130, 54%, 41%);
+$GH-MAX-ACTIVITY-LIGHT: hsl(139, 54%, 28%);
 
 // Dark mode colours
 $DARK-SURFACE-1: hsl(220, 50%, 10%);
@@ -121,6 +121,7 @@ html,
 body {
 	height: 100%;
 	margin: 0;
+	overflow-y: auto;
 }
 
 ul,
