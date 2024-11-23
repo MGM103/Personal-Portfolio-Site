@@ -1,0 +1,19 @@
+{
+  "totalCompetitions": 1,
+  "competitionData": [
+    {
+      "name": "Mystery Box",
+      "platform": "CodeHawks",
+      "totalVulnerabilities": 9,
+      "vulnerabilitiesFound": 7,
+      "vulnerabilityDetails": {
+        "totalHighs": 3,
+        "highsFound": 3,
+        "totalMediums": 4,
+        "mediumsFound": 3,
+        "totalLows": 2,
+        "lowsFound": 1
+      }
+    }
+  ]
+}

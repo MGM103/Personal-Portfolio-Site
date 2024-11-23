@@ -2,6 +2,7 @@
 	import Bio from './Bio.svelte';
 	import ContactMe from './ContactMe.svelte';
 	import GitHubActivity from './GitHubActivity.svelte';
+	import SecurityResearch from './SecurityResearch.svelte';
 	import SoftwareSkills from './SoftwareSkills.svelte';
 
 	// PROPS
@@ -12,6 +13,7 @@
 	<Bio />
 	<GitHubActivity activityData={data} />
 	<SoftwareSkills />
+	<SecurityResearch />
 	<ContactMe />
 </div>
 

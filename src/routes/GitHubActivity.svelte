@@ -79,10 +79,9 @@
 
 		.gh-activity-heading {
 			align-items: center;
-			box-sizing: border-box;
 			display: flex;
 			justify-content: space-between;
-			padding: 2rem;
+			margin-bottom: 1rem;
 			width: 100%;
 
 			h3 {
@@ -91,9 +90,6 @@
 		}
 
 		.gh-activity-content {
-			padding-bottom: 1.5rem;
-			padding-inline: 2rem;
-
 			span {
 				color: var(--accent);
 				font-weight: 500;

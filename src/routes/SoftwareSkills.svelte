@@ -84,14 +84,6 @@
 
 <style scoped lang="scss">
 	.software-skills {
-		.content-container {
-			padding: 2rem;
-		}
-
-		h3 {
-			margin-top: 0;
-		}
-
 		h4 {
 			font-size: 0.875rem;
 			margin-top: 2rem;

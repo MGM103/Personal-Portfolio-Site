@@ -1,7 +1,15 @@
 .content-card {
 	background-color: var(--surface-2);
+	box-sizing: border-box;
 	box-shadow: 0 0px 2px var(--shadow-1);
 	border-radius: 8px;
 	margin-block: 1rem;
+	padding: 2rem;
 	width: fit-content;
+
+	h1,
+	h2,
+	h3 {
+		margin-top: 0;
+	}
 }
