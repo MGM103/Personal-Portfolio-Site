@@ -67,6 +67,10 @@
 			margin-block: 2rem;
 			text-align: center;
 
+			@media (max-width: 550px) {
+				grid-template-columns: 1fr;
+			}
+
 			.vulnerability-category {
 				border-right: 1px solid var(--shadow-1);
 				box-sizing: border-box;
@@ -91,6 +95,17 @@
 
 				#low {
 					color: var(--tertiary-hover-light);
+				}
+
+				@media (max-width: 550px) {
+					border-bottom: 1px solid var(--shadow-1);
+					border-right: unset;
+					padding-block: 0.5rem;
+					padding-inline: 1rem;
+
+					&:last-child {
+						border-bottom: none;
+					}
 				}
 			}
 		}

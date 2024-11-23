@@ -165,6 +165,7 @@
 		background-color: transparent;
 		border: none;
 		display: none;
+		z-index: 0;
 
 		&:hover {
 			cursor: pointer;
@@ -206,7 +207,7 @@
 			padding-inline: 1rem;
 			padding-top: 0.25rem;
 			position: absolute;
-			right: 0;
+			right: 1rem;
 			top: 100%;
 			width: unset;
 
