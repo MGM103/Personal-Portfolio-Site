@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "title": "Go Fund Yourself",
+      "subtitle": "Onchain App",
+      "description": "A project undertaken to understand the end-to-end process of developing a modern-day onchain app and self-hosted deployment.",
+      "link": "https://github.com/MGM103/Go_Fund_Yourself"
+    },
+    {
+      "title": "Personal Site",
+      "subtitle": "Personal portfolio showcase website",
+      "description": "This website is a showcase of my personal skills and projects for prospective employers."
+    },
+    {
+      "title": "CDP Stable Coin",
+      "subtitle": "CDP stable coin DeFi protocol",
+      "description": "This project is an implementation of simple usd stable coin collateralized with ETH."
+    },
+    {
+      "title": "MFE tutorial",
+      "subtitle": "An introduction to Micro-Frontends",
+      "description": "This project will take you from 0 to a completed MFE project and explain each concept along the way."
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 	import Bio from './Bio.svelte';
 	import ContactMe from './ContactMe.svelte';
 	import GitHubActivity from './GitHubActivity.svelte';
+	import Projects from './Projects.svelte';
 	import SecurityResearch from './SecurityResearch.svelte';
 	import SoftwareSkills from './SoftwareSkills.svelte';
 
@@ -15,6 +16,7 @@
 	<SoftwareSkills />
 	<SecurityResearch />
 	<ContactMe />
+	<Projects />
 </div>
 
 <style scoped lang="scss">
