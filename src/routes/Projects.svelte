@@ -11,9 +11,6 @@
 	// ELEMENTS
 	let projectsCarousel;
 
-	// CONSTANTS
-	const WIDTH_PROJECT_CARD = 300;
-
 	// LIFECYCLE
 	onMount(() => {
 		projectsCarousel.addEventListener('scroll', checkScroll);
@@ -28,7 +25,7 @@
 	const checkScroll = () => {
 		const maxScroll = projectsCarousel.scrollWidth - projectsCarousel.clientWidth;
 
-		showPrevBtn = projectsCarousel.scrollLeft >= WIDTH_PROJECT_CARD;
+		showPrevBtn = projectsCarousel.scrollLeft > 0;
 		showNextBtn = projectsCarousel.scrollLeft < maxScroll;
 	};
 

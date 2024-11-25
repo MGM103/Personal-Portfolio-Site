@@ -9,7 +9,9 @@
 	<section id="cc-about">
 		<h4>{subTitle}</h4>
 		<p>{description}</p>
-		<a href={link} target="_blank" class="accented-btn-link">View</a>
+		{#if link}
+			<a href={link} target="_blank" class="accented-btn-link">View</a>
+		{/if}
 	</section>
 </article>
 

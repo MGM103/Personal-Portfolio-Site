@@ -9,17 +9,20 @@
     {
       "title": "Personal Site",
       "subtitle": "Personal portfolio showcase website",
-      "description": "This website is a showcase of my personal skills and projects for prospective employers."
+      "description": "This website is a showcase of my personal skills and projects for prospective employers.",
+      "link": "https://github.com/MGM103/Personal-Portfolio-Site"
     },
     {
       "title": "CDP Stable Coin",
       "subtitle": "CDP stable coin DeFi protocol",
-      "description": "This project is an implementation of simple usd stable coin collateralized with ETH."
+      "description": "This project is an implementation of simple usd stable coin collateralized with ETH.",
+      "link": "https://github.com/MGM103/CDP_Stable_Coin"
     },
     {
       "title": "MFE tutorial",
       "subtitle": "An introduction to Micro-Frontends",
-      "description": "This project will take you from 0 to a completed MFE project and explain each concept along the way."
+      "description": "This project will take you from 0 to a completed MFE project and explain each concept along the way.",
+      "link": "https://github.com/MGM103/MFE_Tutorial"
     }
   ]
 }
