@@ -57,7 +57,15 @@
 <div class="content-card gh-activity-container">
 	<div class="gh-activity-heading">
 		<h3>GitHub Activity</h3>
-		<a href="https://github.com/MGM103" target="_blank" class="text-link">view profile</a>
+		<a href="https://github.com/MGM103" target="_blank" class="text-link"
+			>view profile<svg
+				xmlns="http://www.w3.org/2000/svg"
+				height="20px"
+				viewBox="0 -960 960 960"
+				width="20px"
+				fill="currentColor"><path d="M522-480 333-669l51-51 240 240-240 240-51-51 189-189Z" /></svg
+			></a
+		>
 	</div>
 	<div class="gh-activity-content">
 		<p>Yearly contributions: <span>{activityData.data.totalContributions}</span></p>
@@ -86,6 +94,11 @@
 
 			h3 {
 				margin: 0;
+			}
+
+			a {
+				align-items: center;
+				display: flex;
 			}
 		}
 

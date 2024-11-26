@@ -1,4 +1,5 @@
 <script>
+	import Articles from './Articles.svelte';
 	import Bio from './Bio.svelte';
 	import ContactMe from './ContactMe.svelte';
 	import GitHubActivity from './GitHubActivity.svelte';
@@ -15,8 +16,9 @@
 	<GitHubActivity activityData={data} />
 	<SoftwareSkills />
 	<SecurityResearch />
-	<ContactMe />
 	<Projects />
+	<ContactMe />
+	<Articles />
 </div>
 
 <style scoped lang="scss">

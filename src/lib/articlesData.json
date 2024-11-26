@@ -1,0 +1,29 @@
+{
+  "articles": [
+    {
+      "title": "I built an Onchain App",
+      "description": "See what goes in to creating a modern day onchain app and self-hosting it.",
+      "link": "https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596/tK4qux-P6dok6y1KG8ywoI65dlixwfZ4Tg8raPoAfRk?referrerAddress=0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
+    },
+    {
+      "title": "Transparent Proxies & Upgradability",
+      "description": "A primer for the transparent proxy design pattern with examples of the pitfalls of upgradeability.",
+      "link": "https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596/9-B-ioIEA1TBCqAatqNIdUE25b4k8UkRbpOsT7KdqHs?referrerAddress=0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
+    },
+    {
+      "title": "ERC-1155 Primer",
+      "description": "A primer for the ERC-1155 standard.",
+      "link": "https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596/gmemm-GAG77g2q4gH9rbCkv5R_BUAegZJ63wMgLvbzc?referrerAddress=0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
+    },
+    {
+      "title": "I built an Onchain App: Frontend - Part 1",
+      "description": "The first installment discussing the construction of a modern day frontend for a modern onchain web application.",
+      "link": "https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596/-0HZmBqg9iOs8j2DMCtMQNdebDscg3SuBvoPfZmU098?referrerAddress=0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
+    },
+    {
+      "title": "ERC-165 Primer",
+      "description": "A primer for the ERC-165 standard for interface identification.",
+      "link": "https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596/2Gr1jSj2cOSX4odb3IAgrJu7TK74_p9sxjnzYog7nlE?referrerAddress=0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
+    }
+  ]
+}

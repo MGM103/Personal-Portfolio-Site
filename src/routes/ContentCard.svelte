@@ -1,13 +1,15 @@
 <script>
-	let { title, subTitle, description, link } = $props();
+	let { description, id, link, subTitle, title } = $props();
 </script>
 
-<article>
+<article {id}>
 	<section id="cc-thumbnail">
 		<h3>{title}</h3>
 	</section>
 	<section id="cc-about">
-		<h4>{subTitle}</h4>
+		{#if subTitle}
+			<h4>{subTitle}</h4>
+		{/if}
 		<p>{description}</p>
 		{#if link}
 			<a href={link} target="_blank" class="accented-btn-link">View</a>

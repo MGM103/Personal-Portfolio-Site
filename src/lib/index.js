@@ -1,5 +1,5 @@
-// place files you want to import through the `$lib` alias in this folder.
-import SecurityReviews from './securityReviews.json';
+import ArticlesData from './articlesData.json';
 import ProjectsData from './projectsData.json';
+import SecurityReviews from './securityReviews.json';
 
-export { ProjectsData, SecurityReviews };
+export { ArticlesData, ProjectsData, SecurityReviews };

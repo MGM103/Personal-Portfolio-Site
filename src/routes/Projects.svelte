@@ -101,14 +101,6 @@
 			display: none;
 		}
 
-		.project-pagination-btn {
-			border: none;
-			background-color: var(--shadow-1);
-			border-radius: 50%;
-			color: var(--secondary);
-			cursor: pointer;
-		}
-
 		#prev-project-btn {
 			left: 0;
 			position: absolute;
