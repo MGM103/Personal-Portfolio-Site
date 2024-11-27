@@ -2,7 +2,7 @@
 	import { LinkedInSvg } from '$lib/assets';
 </script>
 
-<div class="content-card">
+<div id="contact-me" class="content-card">
 	<h3>Contact Me</h3>
 	<div class="contact-me-content">
 		<svg
@@ -30,12 +30,28 @@
 </div>
 
 <style scoped lang="scss">
+	#contact-me {
+		height: fit-content;
+		width: 100%;
+	}
+
 	.contact-me-content {
 		align-items: center;
 		display: grid;
 		grid-template-columns: auto 1fr;
-		grid-template-rows: 1fr 1fr;
 		gap: 1rem;
+
+		@media (max-width: 400px) {
+			grid-template-columns: auto;
+
+			:global(svg) {
+				display: none;
+			}
+		}
+
+		a {
+			word-wrap: anywhere;
+		}
 
 		.linkedIn {
 			margin-left: -0.25rem;

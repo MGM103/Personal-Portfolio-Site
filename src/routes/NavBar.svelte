@@ -126,6 +126,7 @@
 		gap: 2.5rem;
 		justify-content: space-between;
 		margin-inline: auto;
+		max-width: 1370px;
 		padding-block: 1rem;
 		padding-inline: 2rem;
 		position: sticky;

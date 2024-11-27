@@ -21,10 +21,12 @@
 	}
 </script>
 
-<div class="content-card">
+<div id="security-research" class="content-card">
 	<h3>Security</h3>
 	<div class="security-content">
-		<p>Total competitions: <span id="total-comps">{SecurityReviews.totalCompetitions}</span></p>
+		<p id="total-comps">
+			Total competitions: <span id="num-comps">{SecurityReviews.totalCompetitions}</span>
+		</p>
 		<div class="vulnerabilities">
 			<div class="vulnerability-category">
 				<p><span id="high">{getTotalHighsFound()}</span></p>
@@ -32,7 +34,7 @@
 			</div>
 			<div class="vulnerability-category">
 				<p><span id="medium">{getTotalMediumsFound()}</span></p>
-				<h4>Medium</h4>
+				<h4>Med</h4>
 			</div>
 			<div class="vulnerability-category">
 				<p><span id="low">{getTotalLowsFound()}</span></p>
@@ -53,32 +55,53 @@
 </div>
 
 <style scoped lang="scss">
+	#security-research {
+		width: 100%;
+	}
+
 	.security-content {
 		#total-comps {
+			white-space: nowrap;
+		}
+
+		#num-comps {
 			color: var(--accent);
 			font-weight: 500;
 		}
 
 		.vulnerabilities {
 			align-items: center;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			display: flex;
 			justify-items: center;
 			margin-block: 2rem;
 			text-align: center;
 
+			@media (min-width: 768px) and (max-width: 920px) {
+				flex-wrap: wrap;
+
+				& > div {
+					border-left: none !important;
+				}
+			}
+
 			@media (max-width: 550px) {
-				grid-template-columns: 1fr;
+				flex-direction: column;
 			}
 
 			.vulnerability-category {
-				border-right: 1px solid var(--shadow-1);
+				border-left: 1px solid var(--shadow-1);
 				box-sizing: border-box;
 				padding-inline: 2rem;
 				width: 100%;
 
+				&:first-child {
+					border-left: none;
+				}
+
 				&:last-child {
-					border-right: none;
+					@media (min-width: 768px) and (max-width: 1280px) {
+						display: none;
+					}
 				}
 
 				p {
@@ -99,7 +122,7 @@
 
 				@media (max-width: 550px) {
 					border-bottom: 1px solid var(--shadow-1);
-					border-right: unset;
+					border-left: unset;
 					padding-block: 0.5rem;
 					padding-inline: 1rem;
 

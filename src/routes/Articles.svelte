@@ -39,9 +39,10 @@
 	.stack {
 		display: grid;
 		overflow: visible;
+		width: 100%;
 
 		.articles-title-row {
-			align-items: baseline;
+			align-items: flex-end;
 			display: flex;
 			justify-content: space-between;
 			margin-top: 2.5rem;
@@ -72,6 +73,12 @@
 	.stack :global(article) {
 		grid-area: 1/1;
 		width: 300px;
+		margin-inline: auto;
+
+		@media (max-width: 450px) {
+			min-width: unset;
+			width: 100%;
+		}
 	}
 
 	:global(#article-1) {
@@ -82,11 +89,19 @@
 		transition: transform 0.2s ease;
 		transform: rotate(-4deg) translateY(0px);
 		z-index: 1;
+
+		@media (max-width: 375px) {
+			display: none;
+		}
 	}
 
 	:global(#article-3) {
 		transition: transform 0.2s ease;
 		transform: rotate(-8deg) translateY(0px);
 		z-index: 0;
+
+		@media (max-width: 375px) {
+			display: none;
+		}
 	}
 </style>

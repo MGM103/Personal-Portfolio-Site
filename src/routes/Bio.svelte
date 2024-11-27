@@ -43,6 +43,10 @@
 </div>
 
 <style scoped lang="scss">
+	.content-card {
+		width: 100%;
+	}
+
 	.bio-top-row {
 		align-items: center;
 		display: flex;
@@ -66,15 +70,20 @@
 		gap: 4rem;
 		justify-content: left;
 
-		@media (max-width: 680px) {
+		@media (max-width: 768px) {
 			flex-direction: column;
 			gap: 2rem;
+
+			img {
+				display: none;
+			}
 		}
 
 		.bio-content {
 			h2 {
 				span {
 					color: var(--accent);
+					white-space: nowrap;
 				}
 			}
 		}

@@ -95,6 +95,12 @@
 			overflow-x: auto;
 			scrollbar-width: none;
 			scroll-snap-type: x mandatory;
+
+			:global(article) {
+				@media (max-width: 400px) {
+					min-width: 100%;
+				}
+			}
 		}
 
 		.projects-wrapper::-webkit-scrollbar {
