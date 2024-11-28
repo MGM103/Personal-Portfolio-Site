@@ -86,9 +86,13 @@
 	{#if displayLinks}
 		<div class="links-container">
 			<ul>
-				<li><a href="/blog" class="nav-link">Blog</a></li>
-				<li><a href="/projects" class="nav-link">Projects</a></li>
-				<li><a href="/security" class="nav-link">Security</a></li>
+				<li>
+					<a href="https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596" class="nav-link"
+						>Blog</a
+					>
+				</li>
+				<li><a href="https://github.com/MGM103" class="nav-link">Projects</a></li>
+				<li><a href="https://github.com/MGM103/Security-reviews" class="nav-link">Security</a></li>
 			</ul>
 			<div class="btn-group">
 				<button
