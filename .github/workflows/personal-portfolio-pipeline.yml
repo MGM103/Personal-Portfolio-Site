@@ -3,11 +3,11 @@ name: CI/CD pipeline for personal portfolio
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -30,7 +30,7 @@ jobs:
             ghcr.io/mgm103/personal-portfolio:${{ github.sha }}
 
   deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     needs:
       - build
     steps:
