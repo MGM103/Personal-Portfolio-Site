@@ -42,7 +42,7 @@ jobs:
           echo "GIT_COMMIT_HASH=${{ github.sha }}" >> ./envfile
 
       - name: Docker Stack Deploy
-        uses: cssr/stack-deploy-action@v1
+        uses: cssnr/stack-deploy-action@v1
         with:
           name: personal-portfolio
           file: docker-stack.yml
