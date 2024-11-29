@@ -51,4 +51,4 @@ jobs:
           user: deploy
           ssh_key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
           env_file: ./envfile
-          additional_args: '--with-registry-auth'
+          args: '--with-registry-auth'
