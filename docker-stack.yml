@@ -1,7 +1,6 @@
 services:
   app:
     image: ghcr.io/mgm103/personal-portfolio:${GIT_COMMIT_HASH:-latest}
-    container_name: personal-portfolio-site
     environment:
       - ORIGIN=https://marcusmarinelli.com
     ports:
