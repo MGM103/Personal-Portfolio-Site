@@ -25,6 +25,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          build-args: GH_TOKEN=${{ secrets.GH_API_KEY }}
           push: true
           tags: |
             ghcr.io/mgm103/personal-portfolio:latest
