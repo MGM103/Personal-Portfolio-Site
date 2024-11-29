@@ -8,9 +8,3 @@ services:
     deploy:
       update_config:
         order: start-first
-    secrets:
-      - ghcr_token
-
-secrets:
-  ghcr_token:
-    external: true
