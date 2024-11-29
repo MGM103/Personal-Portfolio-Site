@@ -2,6 +2,7 @@
 
 IMAGE_NAME := personal-portfolio-site
 CONTAINER_NAME := portfolio-container
+GITHUB_USERNAME := mgm103
 
 dockerCreate:; dockerBuild dockerRun
 
@@ -14,3 +15,6 @@ dockerRun:
 dockerStop:
 	docker stop $(CONTAINER_NAME)
 	docker rm $(CONTAINER_NAME)
+
+dockerPublish:
+	docker push ghcr.io/$(GITHUB_USERNAME)/personal-portfolio:latest
