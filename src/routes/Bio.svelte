@@ -1,6 +1,11 @@
 <script>
-	import { BioImg, GitHubSvg, LinkedInSvg, ResumeSvg } from '$lib/assets';
+	import { GitHubSvg, LinkedInSvg, ResumeSvg } from '$lib/assets';
 </script>
+
+<svelte:head>
+	<link rel="preload" href="/images/cv_cropped_photo.webp" as="image" type="image/webp" />
+	<link rel="preload" href="/images/cv_cropped_photo.jpg" as="image" type="image/jpeg" />
+</svelte:head>
 
 <div class="content-card">
 	<div class="bio-top-row">
@@ -20,7 +25,11 @@
 		</div>
 	</div>
 	<div class="bio-second-row">
-		<img id="bio-head-shot" src={BioImg} alt="head shot" />
+		<picture>
+			<source srcset="/images/cv_cropped_photo.webp" type="image/webp" />
+			<source srcset="/images/cv_cropped_photo.jpg" type="image/jpeg" />
+			<img id="bio-head-shot" src="/images/cv_cropped_photo.jpg" alt="head shot" />
+		</picture>
 		<div class="bio-content">
 			<h2>Hi there, I'm <span>Marcus👋</span></h2>
 			<p>Welcome to my personal site!</p>

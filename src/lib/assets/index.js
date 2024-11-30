@@ -1,5 +1,3 @@
-import BioImg from './cv_cropped_photo.jpg';
-
 export { default as AngularSvg } from './AngularLogo.svelte';
 export { default as AzureCloudSvg } from './AzureCloudLogo.svelte';
 export { default as AzureDevOpsSvg } from './AzureDevOpsLogo.svelte';
@@ -35,5 +33,3 @@ export { default as SqlSvg } from './SqlLogo.svelte';
 export { default as SvelteSvg } from './SvelteLogo.svelte';
 export { default as TypeScriptSvg } from './TypescriptLogo.svelte';
 export { default as VueSvg } from './VueLogo.svelte';
-
-export { BioImg };
