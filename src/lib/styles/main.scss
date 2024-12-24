@@ -125,9 +125,8 @@ body {
 
 html,
 body {
-	height: 100%;
+	min-height: 100%;
 	margin: 0;
-	overflow-y: auto;
 }
 
 ul,
@@ -139,4 +138,19 @@ ol {
 
 a {
 	color: var(--accent);
+}
+
+/* For Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+	height: 4px; /* Height of horizontal scrollbar */
+	width: 4px; /* Width of vertical scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888; /* Color of the scroll thumb */
+	border-radius: 12px;
+
+	&:hover {
+		background: #555; /* Color of the scroll thumb on hover */
+	}
 }

@@ -35,10 +35,17 @@
 			<p>Welcome to my personal site!</p>
 			<p>
 				I'm a software engineer specialising in full-stack development. This site showcases my
-				latest <a href="/projects" class="text-link">projects</a>, all my
-				<a href="/blog" class="text-link">technical writing</a>
+				latest <a href="https://github.com/MGM103" class="text-link" target="_blank">projects</a>,
+				all my
+				<a
+					href="https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
+					class="text-link"
+					target="_blank">technical writing</a
+				>
 				and my progress as an independent
-				<a href="/security" class="text-link">security researcher</a>.
+				<a href="https://github.com/MGM103/Security-reviews" class="text-link" target="_blank"
+					>security researcher</a
+				>.
 			</p>
 			<p>
 				Should my skills or previous experience align with a position you are looking to fill, or if

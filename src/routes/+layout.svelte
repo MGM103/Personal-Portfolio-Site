@@ -48,8 +48,4 @@
 		margin-inline: auto;
 		max-width: 100%;
 	}
-
-	main {
-		overflow-x: hidden;
-	}
 </style>

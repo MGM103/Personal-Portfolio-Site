@@ -17,8 +17,8 @@
 		updateScreenSize();
 
 		return () => {
-			window.removeEventListener('resize', updateScreenSize);
 			window.removeEventListener('scroll', updateNavbarShadow);
+			window.removeEventListener('resize', updateScreenSize);
 		};
 	});
 
