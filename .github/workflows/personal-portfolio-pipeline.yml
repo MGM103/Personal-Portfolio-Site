@@ -48,7 +48,7 @@ jobs:
         with:
           name: personal-portfolio
           file: docker-stack.yml
-          host: marcusmarinelli.com
+          host: ${{ secrets.HOST }}
           user: deploy
           ssh_key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
           env_file: ./envfile
