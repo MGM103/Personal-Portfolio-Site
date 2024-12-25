@@ -11,13 +11,11 @@
 	// LIFECYCLE LOGIC
 	onMount(() => {
 		buttonTheme = getTheme();
-		window.addEventListener('scroll', updateNavbarShadow);
 		window.addEventListener('resize', updateScreenSize);
 
 		updateScreenSize();
 
 		return () => {
-			window.removeEventListener('scroll', updateNavbarShadow);
 			window.removeEventListener('resize', updateScreenSize);
 		};
 	});
@@ -62,21 +60,9 @@
 	function updateScreenSize() {
 		screenSize = window.innerWidth;
 	}
-
-	let navBar;
-
-	const updateNavbarShadow = () => {
-		const scrollTop = window.scrollY;
-
-		if (scrollTop > 0) {
-			navBar.style.setProperty('--nav-shadow', '0 -8px 24px var(--secondary)');
-		} else {
-			navBar.style.setProperty('--nav-shadow', 'none');
-		}
-	};
 </script>
 
-<nav bind:this={navBar}>
+<nav>
 	<div class="logo">
 		<a href="/">
 			<span>Marcus</span>
@@ -134,6 +120,7 @@
 		padding-block: 1rem;
 		padding-inline: 2rem;
 		position: sticky;
+		overflow-x: hidden;
 		top: 0;
 		width: 100%;
 		z-index: 1;
@@ -154,14 +141,13 @@
 		&::before {
 			content: '';
 			background-color: var(--surface-1);
-			box-shadow: var(--nav-shadow);
 			height: 100%;
 			top: 0;
 			left: 50%;
 			position: absolute;
 			transform: translateX(-50%);
 			transition: box-shadow 0.5s ease;
-			width: 100%;
+			width: 100vw;
 			z-index: 0;
 		}
 	}
