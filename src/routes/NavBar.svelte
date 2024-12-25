@@ -161,7 +161,7 @@
 			position: absolute;
 			transform: translateX(-50%);
 			transition: box-shadow 0.5s ease;
-			width: 100vw;
+			width: 100%;
 			z-index: 0;
 		}
 	}
