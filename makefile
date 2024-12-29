@@ -18,3 +18,6 @@ dockerStop:
 
 dockerPublish:
 	docker push ghcr.io/$(GITHUB_USERNAME)/personal-portfolio:latest
+
+stackDeploy:
+	docker stack deploy -c ./docker-stack.yml personal-site --with-registry-auth
