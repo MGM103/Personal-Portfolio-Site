@@ -46,7 +46,7 @@ jobs:
       - name: Docker Stack Deploy
         uses: cssnr/stack-deploy-action@v1
         with:
-          name: personal-portfolio
+          name: personal-site
           file: docker-stack.yml
           host: ${{ secrets.HOST }}
           user: deploy
