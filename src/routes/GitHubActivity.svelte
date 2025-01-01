@@ -68,7 +68,7 @@
 		>
 	</div>
 	<div class="gh-activity-content">
-		<p>Yearly contributions: <span>{activityData.data.totalContributions}</span></p>
+		<p>YTD contributions: <span>{activityData.data.totalContributions}</span></p>
 		<div class="table-wrapper">
 			<table id="activity-graph">
 				<tbody id="activity-graph-content"></tbody>

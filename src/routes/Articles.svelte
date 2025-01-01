@@ -57,15 +57,17 @@
 			}
 		}
 
-		&:hover {
-			:global(#article-1) {
-				transform: rotate(-1deg);
-			}
-			:global(#article-2) {
-				transform: rotate(-25deg) translate(-150px, -75px);
-			}
-			:global(#article-3) {
-				transform: rotate(-38deg) translate(-290px, -155px);
+		@media (min-width: 768px) {
+			&:hover {
+				:global(#article-1) {
+					transform: rotate(-1deg);
+				}
+				:global(#article-2) {
+					transform: rotate(-25deg) translate(-150px, -75px);
+				}
+				:global(#article-3) {
+					transform: rotate(-38deg) translate(-290px, -155px);
+				}
 			}
 		}
 	}

@@ -123,13 +123,18 @@
 		overflow-x: hidden;
 		top: 0;
 		width: 100%;
-		z-index: 1;
+		z-index: 4;
+
+		@media (max-width: 768px) {
+			overflow-x: unset;
+		}
 
 		ul {
 			align-items: center;
 			display: flex;
 			gap: 2.5rem;
 			position: relative;
+			z-index: 3;
 
 			@media (max-width: 768px) {
 				flex-direction: column;
@@ -148,7 +153,7 @@
 			transform: translateX(-50%);
 			transition: box-shadow 0.5s ease;
 			width: 100vw;
-			z-index: 0;
+			z-index: 3;
 		}
 	}
 
@@ -156,7 +161,7 @@
 		background-color: transparent;
 		border: none;
 		display: none;
-		z-index: 0;
+		z-index: 3;
 
 		&:hover {
 			cursor: pointer;
@@ -168,7 +173,7 @@
 	}
 
 	.logo {
-		z-index: 1;
+		z-index: 4;
 
 		a {
 			color: var(--secondary);
@@ -212,7 +217,7 @@
 				right: 0;
 				top: 0;
 				width: 100%;
-				z-index: -1;
+				z-index: 2;
 			}
 		}
 	}
@@ -222,7 +227,7 @@
 		display: flex;
 		gap: 2rem;
 		justify-content: center;
-		z-index: 1;
+		z-index: 4;
 
 		@media (max-width: 768px) {
 			flex-direction: column;
