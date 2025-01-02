@@ -1,4 +1,5 @@
 <script>
+	import { BLOG_URL, GITHUB_URL, LINKEDIN_URL, RESUME_URL, SECURITY_PORTFOLIO_URL } from '$lib';
 	import { GitHubSvg, LinkedInSvg, ResumeSvg } from '$lib/assets';
 </script>
 
@@ -11,17 +12,9 @@
 	<div class="bio-top-row">
 		<h1>Bio</h1>
 		<div class="bio-links">
-			<a href="https://github.com/MGM103" target="_blank" title="GitHub"><GitHubSvg /></a>
-			<a
-				href="https://www.linkedin.com/in/marcus-marinelli-b1a10b1a0/"
-				target="_blank"
-				title="LinkedIn"><LinkedInSvg /></a
-			>
-			<a
-				href="https://drive.google.com/file/d/1PjX0o2Jo1tCR3rbRnKqOH74kPNhBzD_P/view"
-				target="_blank"
-				title="Résumé"><ResumeSvg /></a
-			>
+			<a href={GITHUB_URL} target="_blank" title="GitHub"><GitHubSvg /></a>
+			<a href={LINKEDIN_URL} target="_blank" title="LinkedIn"><LinkedInSvg /></a>
+			<a href={RESUME_URL} target="_blank" title="Résumé"><ResumeSvg /></a>
 		</div>
 	</div>
 	<div class="bio-second-row">
@@ -35,17 +28,10 @@
 			<p>Welcome to my personal site!</p>
 			<p>
 				I'm a software engineer specialising in full-stack development. This site showcases my
-				latest <a href="https://github.com/MGM103" class="text-link" target="_blank">projects</a>,
-				all my
-				<a
-					href="https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
-					class="text-link"
-					target="_blank">technical writing</a
-				>
+				latest <a href={GITHUB_URL} class="text-link" target="_blank">projects</a>, all my
+				<a href={BLOG_URL} class="text-link" target="_blank">technical writing</a>
 				and my progress as an independent
-				<a href="https://github.com/MGM103/Security-reviews" class="text-link" target="_blank"
-					>security researcher</a
-				>.
+				<a href={SECURITY_PORTFOLIO_URL} class="text-link" target="_blank">security researcher</a>.
 			</p>
 			<p>
 				Should my skills or previous experience align with a position you are looking to fill, or if

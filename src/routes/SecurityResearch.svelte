@@ -1,5 +1,5 @@
 <script>
-	import { SecurityReviews } from '$lib';
+	import { SECURITY_PORTFOLIO_URL, SecurityReviews } from '$lib';
 
 	// METHODS
 	function getTotalHighsFound() {
@@ -41,7 +41,7 @@
 				<h4>Low</h4>
 			</div>
 		</div>
-		<a href="https://github.com/MGM103/Security-reviews" target="_blank" class="text-link"
+		<a href={SECURITY_PORTFOLIO_URL} target="_blank" class="text-link"
 			>View findings
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

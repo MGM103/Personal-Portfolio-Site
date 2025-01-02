@@ -9,8 +9,6 @@ export async function load() {
 	const toDate = today.toISOString();
 	const fromDate = lastYear.toISOString();
 
-	console.log(`From: ${fromDate}\nTo: ${toDate}`);
-
 	const query = `
         query {
             user(login: "mgm103") {
@@ -31,7 +29,6 @@ export async function load() {
 
 	const response = await fetchGitHubGraphQLData(query);
 	const data = response.data.user.contributionsCollection.contributionCalendar;
-	console.log(data.weeks[51]);
 
 	return {
 		data

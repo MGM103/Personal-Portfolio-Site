@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { BLOG_URL, GITHUB_URL, RESUME_URL, SECURITY_PORTFOLIO_URL } from '$lib';
 	import { DarkThemeSvg, HamburgerMenuSvg, LightThemeSvg } from '$lib/assets';
 	import { error } from '@sveltejs/kit';
 
@@ -96,12 +97,10 @@
 		<div class="links-container">
 			<ul>
 				<li>
-					<a href="https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596" class="nav-link"
-						>Blog</a
-					>
+					<a href={BLOG_URL} class="nav-link">Blog</a>
 				</li>
-				<li><a href="https://github.com/MGM103" class="nav-link">Projects</a></li>
-				<li><a href="https://github.com/MGM103/Security-reviews" class="nav-link">Security</a></li>
+				<li><a href={GITHUB_URL} class="nav-link">Projects</a></li>
+				<li><a href={SECURITY_PORTFOLIO_URL} class="nav-link">Security</a></li>
 			</ul>
 			<div class="btn-group">
 				<button
@@ -117,11 +116,7 @@
 						<DarkThemeSvg />
 					{/if}
 				</button>
-				<a
-					href="https://drive.google.com/file/d/1PjX0o2Jo1tCR3rbRnKqOH74kPNhBzD_P/view?usp=sharing"
-					target="_blank"
-					class="accented-btn-link">Résumé</a
-				>
+				<a href={RESUME_URL} target="_blank" class="accented-btn-link">Résumé</a>
 			</div>
 		</div>
 	{/if}

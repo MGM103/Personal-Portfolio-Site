@@ -1,4 +1,5 @@
 <script>
+	import { LINKEDIN_URL } from '$lib';
 	import { LinkedInSvg } from '$lib/assets';
 </script>
 
@@ -21,11 +22,7 @@
 		<div class="linkedIn">
 			<LinkedInSvg />
 		</div>
-		<a
-			href="https://www.linkedin.com/in/marcus-marinelli-b1a10b1a0/"
-			target="_blank"
-			class="text-link">Marcus Marinelli LinkedIn</a
-		>
+		<a href={LINKEDIN_URL} target="_blank" class="text-link">Marcus Marinelli LinkedIn</a>
 	</div>
 </div>
 

@@ -1,6 +1,6 @@
 <script>
 	import ContentCard from './ContentCard.svelte';
-	import { ArticlesData } from '$lib';
+	import { ArticlesData, BLOG_URL } from '$lib';
 
 	// METHODS
 	function getDisplayArticles() {
@@ -20,10 +20,7 @@
 	{/each}
 	<div class="articles-title-row">
 		<h3>Articles</h3>
-		<a
-			href="https://mirror.xyz/0x194541D1009d22f7aE586c3AAeF4273B5aA79596"
-			target="_blank"
-			class="text-link"
+		<a href={BLOG_URL} target="_blank" class="text-link"
 			>View all articles<svg
 				xmlns="http://www.w3.org/2000/svg"
 				height="20px"

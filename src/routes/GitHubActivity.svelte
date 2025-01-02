@@ -1,4 +1,5 @@
 <script>
+	import { GITHUB_URL } from '$lib';
 	import { onMount } from 'svelte';
 
 	// PROPS
@@ -57,7 +58,7 @@
 <div class="content-card gh-activity-container">
 	<div class="gh-activity-heading">
 		<h3>GitHub Activity</h3>
-		<a href="https://github.com/MGM103" target="_blank" class="text-link"
+		<a href={GITHUB_URL} target="_blank" class="text-link"
 			>view profile<svg
 				xmlns="http://www.w3.org/2000/svg"
 				height="20px"
