@@ -95,6 +95,16 @@
 			}
 		}
 
+		@media (min-width: 768px) and (max-width: 850px) {
+			picture {
+				flex: 1;
+			}
+
+			.bio-content {
+				flex: 1;
+			}
+		}
+
 		.bio-content {
 			h2 {
 				span {
@@ -109,5 +119,11 @@
 		border-radius: 16px;
 		max-height: 250px;
 		max-width: 250px;
+
+		@media (min-width: 768px) and (max-width: 850px) {
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+		}
 	}
 </style>

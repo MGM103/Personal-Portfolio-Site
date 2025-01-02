@@ -23,7 +23,7 @@
 		for (let dayOfWeek = 0; dayOfWeek < DAYS_IN_WEEK; dayOfWeek++) {
 			const graphRow = document.createElement('tr');
 
-			for (let weekOfYear = 0; weekOfYear < WEEKS_IN_YEAR; weekOfYear++) {
+			for (let weekOfYear = 0; weekOfYear <= WEEKS_IN_YEAR; weekOfYear++) {
 				const week = weeklyContributions[weekOfYear];
 				const day = week.contributionDays[dayOfWeek];
 				const contributionsInDay = day ? day.contributionCount : 0;

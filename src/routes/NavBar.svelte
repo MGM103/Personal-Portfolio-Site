@@ -7,6 +7,7 @@
 	let showMobileMenu = $state(false);
 	let screenSize = $state(0);
 	let buttonTheme = $state(null);
+	let mobileMenuEventAdded = $state(false);
 
 	// LIFECYCLE LOGIC
 	onMount(() => {
@@ -23,6 +24,19 @@
 	// COMPUTED VARS
 	let displayLinks = $derived(screenSize > 768 || showMobileMenu);
 
+	// EFFECTS
+	$effect(() => {
+		if (showMobileMenu) {
+			document.addEventListener('click', handleOffClick);
+			mobileMenuEventAdded = true;
+		}
+
+		if (!showMobileMenu && mobileMenuEventAdded) {
+			document.removeEventListener('click', handleOffClick);
+			mobileMenuEventAdded = false;
+		}
+	});
+
 	// COMPONENT METHODS
 	function getTheme() {
 		const currentTheme = localStorage.getItem('theme');
@@ -36,6 +50,15 @@
 			return prefersDarkMode ? 'dark' : 'light';
 		} else {
 			throw error('Theme could not be identified');
+		}
+	}
+
+	function handleOffClick(e) {
+		const mobileMenu = document.querySelector('.links-container');
+		const menuBtn = document.querySelector('.mobile-menu-btn');
+
+		if (mobileMenu && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+			showMobileMenu = false;
 		}
 	}
 
@@ -102,7 +125,12 @@
 			</div>
 		</div>
 	{/if}
-	<button class="mobile-menu-btn" onclick={() => toggleMobileMenu()}><HamburgerMenuSvg /></button>
+	<button
+		class="mobile-menu-btn"
+		onclick={() => {
+			toggleMobileMenu();
+		}}><HamburgerMenuSvg /></button
+	>
 </nav>
 
 <style scoped lang="scss">
