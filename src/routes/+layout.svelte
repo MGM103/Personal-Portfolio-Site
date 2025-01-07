@@ -28,7 +28,7 @@
 		}
 	</script>
 
-	<title>Marcus Marinelli Dev</title>
+	<title>Marcus Marinelli Portfolio</title>
 </svelte:head>
 
 <div class="container">

@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import { BLOG_URL, GITHUB_URL, RESUME_URL, SECURITY_PORTFOLIO_URL } from '$lib';
 	import { DarkThemeSvg, HamburgerMenuSvg, LightThemeSvg } from '$lib/assets';
 	import { error } from '@sveltejs/kit';
@@ -94,7 +95,7 @@
 		</a>
 	</div>
 	{#if displayLinks}
-		<div class="links-container">
+		<div class="links-container" in:fade>
 			<ul>
 				<li>
 					<a href={BLOG_URL} class="nav-link">Blog</a>

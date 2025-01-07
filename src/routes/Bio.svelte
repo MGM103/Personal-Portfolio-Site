@@ -1,6 +1,39 @@
 <script>
+	import { onMount } from 'svelte';
 	import { BLOG_URL, GITHUB_URL, LINKEDIN_URL, RESUME_URL, SECURITY_PORTFOLIO_URL } from '$lib';
 	import { GitHubSvg, LinkedInSvg, ResumeSvg } from '$lib/assets';
+
+	// STATE VARS
+	let greetingWave = $state(false);
+
+	// LIFECYCLE
+	onMount(() => {
+		greetingAnimation();
+	});
+
+	// METHODS
+	function greetingAnimation() {
+		const greetingElements = document.getElementById('greeting').querySelectorAll('span');
+
+		greetingElements.forEach((span, index) => {
+			setTimeout(() => {
+				if (index < greetingElements.length - 1) {
+					span.style.transition = 'color 0.15s ease';
+					span.style.color = 'var(--accent)';
+
+					if (index < greetingElements.length - 2) {
+						setTimeout(() => {
+							span.style.color = 'unset';
+						}, 500);
+					}
+				}
+			}, 500 * index);
+		});
+
+		setTimeout(() => {
+			greetingWave = true;
+		}, 2000);
+	}
 </script>
 
 <svelte:head>
@@ -24,7 +57,10 @@
 			<img id="bio-head-shot" src="/images/cv_cropped_photo.jpg" alt="head shot" />
 		</picture>
 		<div class="bio-content">
-			<h2>Hi there, I'm <span>Marcus👋</span></h2>
+			<h2 id="greeting">
+				<span>Hi</span> <span>there</span>, <span>I'm</span> <span>Marcus</span>
+				<span id="greeting-wave" class={greetingWave ? 'wave' : ''}>👋</span>
+			</h2>
 			<p>Welcome to my personal site!</p>
 			<p>
 				I'm a software engineer specialising in full-stack development. This site showcases my
@@ -90,15 +126,10 @@
 				flex: 1;
 			}
 		}
+	}
 
-		.bio-content {
-			h2 {
-				span {
-					color: var(--accent);
-					white-space: nowrap;
-				}
-			}
-		}
+	#greeting-wave {
+		display: inline-block;
 	}
 
 	#bio-head-shot {

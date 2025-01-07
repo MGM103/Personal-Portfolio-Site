@@ -1,0 +1,21 @@
+@keyframes wave {
+	0% {
+		transform: rotate(0deg) translate(0, 0);
+	}
+
+	33% {
+		transform: rotate(-30deg) translate(-2px, 5px);
+	}
+
+	66% {
+		transform: rotate(75deg) translate(2px, -5px);
+	}
+
+	100% {
+		transform: rotate(0deg) translate(0, 0);
+	}
+}
+
+.wave {
+	animation: wave 1.5s ease-in-out forwards;
+}
